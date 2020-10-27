@@ -1,7 +1,7 @@
 [flake8]
 
-excude =
-    migratopms,
+exclude  =
+    migrations,
     __pycache,
     manage.py,
     settings.py
