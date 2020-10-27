@@ -1,0 +1,7 @@
+[flake8]
+
+excude =
+    migratopms,
+    __pycache,
+    manage.py,
+    settings.py
