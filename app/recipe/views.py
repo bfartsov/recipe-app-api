@@ -6,7 +6,8 @@ from core.models import Tag
 from recipe import serializers
 
 
-class TagViewSet(viewsets.GenericViewSet, mixins.ListModelMixin, mixins.CreateModelMixin):
+class TagViewSet(viewsets.GenericViewSet, mixins.ListModelMixin,
+                 mixins.CreateModelMixin):
     authentication_classes = (TokenAuthentication, )
     permissions_classes = (IsAuthenticated, )
     queryset = Tag.objects.all()
