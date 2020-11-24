@@ -11,7 +11,7 @@ class TagViewSet(viewsets.GenericViewSet, mixins.ListModelMixin,
     authentication_classes = (TokenAuthentication, )
     permissions_classes = (IsAuthenticated, )
     queryset = Tag.objects.all()
-    serializers_classes = (serializers.TagSerializer, )
+    serializer_class = serializers.TagSerializer
 
     def get_queryset(self):
         return self.queryset.filter(user=self.request.user).order_by('-name')
